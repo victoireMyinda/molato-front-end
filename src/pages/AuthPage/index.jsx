@@ -2,6 +2,7 @@ import React from 'react'
 import { AppBar, Paper,Box ,TextField, Stack, Typography, Button, Link} from '@mui/material'
 import BgAuth from '../../assets/pexels-pavel-danilyuk-6461200.jpg'
 import LogoHome from '../../assets/Logo-min.svg'
+import LoginIcon from '@mui/icons-material/Login';
 // import { Container } from '@mui/material';
 // import { FormControl,InputLabel,Input, FormHelperText} from '@mui/material';
 
@@ -31,7 +32,7 @@ export default function Auth() {
         <AppBar
            position="static"  
            style={{ background: 'transparent', boxShadow: 'none'}} 
-           sx={{height:90}}>
+           sx={{height:90,display:"flex", flexDirection:"row",justifyContent:"space-between"}}>
             <Link href="/" underline="none">
               <Box
                 component = "img"
@@ -57,6 +58,27 @@ export default function Auth() {
                  
             />   
             </Link>
+            <Link 
+            href="/login" 
+            underline="none"
+            sx={{ p:"40px"}}>
+                <Button 
+                variant="contained" 
+                sx={{
+                  marginLeft:"20px",
+                  backgroundColor: "#D2282D",
+                  color : "#fff",
+                  borderRadius:"10px",
+                  m:"30px",
+                  '&:hover':{
+                    backgroundColor:"#fff",
+                    color:"#D2282D"
+                  },
+                  display: {
+                    xs:"none",
+                    sm:"block"}}}>Se connecter</Button>
+                <LoginIcon sx={{ color:"#D2282D",display: {xs:"block", sm:"none"}}}/>
+              </Link>
         </AppBar>
        <Stack 
         sx={{
