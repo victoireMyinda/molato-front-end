@@ -1,28 +1,30 @@
-import React from 'react'
-import { AppBar, Paper,Box ,TextField, Stack, Typography, Button, Link} from '@mui/material'
+
+import React from 'react';
+import { AppBar, Paper, Box, TextField, Stack, Typography, Button, Link } from '@mui/material'
 import BgLogin from '../../assets/workspace-concept-with-sewing-machine-min.jpg'
 import LogoHome from '../../assets/Logo-min.svg'
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 
 
-export default function Login() {
-  const styles={
-    paperContainer:{
-        backgroundSize : "cover",
-        backgroundImage: `url(${BgLogin})`,
-        backgroundRepeat: "no-repeat",
-        backgroundColor: "black",
-        backgroundAttachment: "fixed",
-        backgroundPosition: "center",
-        width: "100%",
-    },
-    positionForm:{
-        display:"flex",
-        flexDirection:"column",
-        justifyContent:"center"
 
+export default function Login() {
+    const styles = {
+        paperContainer: {
+            backgroundSize: "cover",
+            backgroundImage: `url(${BgLogin})`,
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "black",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+            width: "100%",
+        },
+        positionForm: {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center"
+
+        }
     }
-}
 
 
 return (
@@ -116,11 +118,13 @@ return (
                     mb:"20px",
                 }}
                     >Apprendre à mieux gérer commence aujourd’hui</Typography>
+
                 <form style={styles.positionForm} >
                     <TextField
                         required
                         id="name"
                         placeholder='Maria Lozo'
+
                         sx={{backgroundColor:"#E4E4EC",
                         mb:"20px",
                         width:{ sm: 300, md: 300, xs:300, lg:300 },
@@ -140,6 +144,7 @@ return (
                             height: 40
                         }}}
                         >
+
                     </TextField>
                     <TextField
                         required
@@ -174,5 +179,4 @@ return (
   </Stack>
 </Paper>
 )
-}
 
