@@ -78,93 +78,100 @@ return (
             <AppRegistrationIcon sx={{ marginLeft:"20px", color:"#D2282D",display: {xs:"block", sm:"none"}}}/>
           </Link>
     </AppBar>
-   <Stack 
-    sx={{
-        backgroundColor:"#fff",
-        width:"30%",
-        height:"75%",
-        display:"flex",
-        flexDirection:"column",
-        alignItems:"center",
-        textAlign:"center",
-        ml:"35%",
-        borderRadius:"20px",
-        '@media (max-width:900px)':{
-            width:"85%",
-            height:"50%",
-            ml:"7%",
-            mt:"35%",
+    <Stack 
+       direction="column"
+       justifyContent="center"
+       alignItems="center"
+       sx={{
+        height:"85%",
+        }}
+       >
 
-    }}}
-    direction="column"
-    spacing={2}
-    >
-        <Typography 
-        variant="h6" 
-        sx={{
-            mt:"40px",
-            color:"#D2282D",
-            fontSize:"24px",
-            fontWeight:"600",
-            lineHeight:"25px",
-            width:"55%",
-            mb:"30px",
-            '@media (max-width:600px)':{
-                fontSize:"20px",
-                mb:"20px",
-                width:"70%"
-            }}}>Commencez à gérer en un click</Typography>
-         <form style={styles.positionForm} >
-            <TextField
-                required
-                id="name"
-                placeholder='Maria Lozo'
-                sx={{backgroundColor:"#E4E4EC",
-                mb:"30px",
-                width: { sm: 200, md: 300 },
-                "& .MuiInputBase-root": {
-                    height: 50
-                } }}
-                >
-            </TextField>
-            <TextField
-                required
-                id="password"
-                type="password"
-                placeholder='Mot de passe'
-                sx={{backgroundColor:"#E4E4EC",
-                mb:"20px",
-                width: { sm: 20, md: 300 },
-                "& .MuiInputBase-root": {
-                    height: 50
-                }}}
-                >
-            </TextField>
-            <Stack 
-            sx={{display:"flex",
-            justifyContent:"center",
-            alignItems:"center",
-            mt:"20px"}}>
-            <Button 
-            variant="contained" 
-            type="submit"
-             sx={{width:"180px",
-            marginLeft:"20px",
-            backgroundColor: "#D2282D",
-            color : "#fff",
-            borderRadius:"10px",
-            '&:hover':{
-              backgroundColor:"#fff",
-              color:"#D2282D"
-            },
-            '@media (max-width:600px)':{
-              width:"200px"
-            }}}>
-               Envoyer
-            </Button>
-            </Stack>
-        </form>
-   </Stack>
+        <Stack 
+            sx={{
+                backgroundColor:"#fff",
+                height:"70%",
+                borderRadius:"20px",
+                
+                }}
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            spacing={{ xs: 1, md: 2,lg:2, sm:2}}
+            maxWidth={{
+                xs:"100%",
+                sm:"60%",
+                md:"50%",
+                lg:"30%"
+            }}
+            >
+                <Typography 
+                variant="h6" 
+                align="center"
+                sx={{
+                    width:"70%",
+                    color:"#D2282D",
+                    fontWeight:"600",
+                    lineHeight:"25px",
+                    mb:"20px",
+                }}
+                    >Apprendre à mieux gérer commence aujourd’hui</Typography>
+                <form style={styles.positionForm} >
+                    <TextField
+                        required
+                        id="name"
+                        placeholder='Maria Lozo'
+                        sx={{backgroundColor:"#E4E4EC",
+                        mb:"20px",
+                        width:{ sm: 300, md: 300, xs:300, lg:300 },
+                        "& .MuiInputBase-root": {
+                            height: 40
+                        } }}
+                        >
+                    </TextField>
+                    <TextField
+                        required
+                        id="boutique"
+                        placeholder="Maria couture"
+                        sx={{backgroundColor:"#E4E4EC",
+                        mb:"20px",
+                        width: { sm: 300, md: 300, xs:300, lg:300 },
+                        "& .MuiInputBase-root": {
+                            height: 40
+                        }}}
+                        >
+                    </TextField>
+                    <TextField
+                        required
+                        id="password"
+                        type="password"
+                        placeholder='Mot de passe'
+                        sx={{backgroundColor:"#E4E4EC",
+                        mb:"20px",
+                        width:{ sm: 300, md: 300, xs:300, lg:300 },
+                        "& .MuiInputBase-root": {
+                            height: 40
+                        }}}
+                        >
+                    </TextField>
+                    <Button 
+                    alignItems="center"
+                    variant="contained" 
+                    type="submit"
+                    sx={{
+                    backgroundColor: "#D2282D",
+                    color : "#fff",
+                    borderRadius:"10px",
+                    '&:hover':{
+                    backgroundColor:"#fff",
+                    color:"#D2282D"
+                    }}}
+                    >
+                        Envoyer
+                    </Button>
+                </form>
+        </Stack>
+  </Stack>
 </Paper>
 )
 }
