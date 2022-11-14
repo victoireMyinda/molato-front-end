@@ -22,6 +22,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { Link, Stack } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -74,9 +75,9 @@ const AppBar = styled(MuiAppBar, {
     }),
   }),
   backgroundColor:"#D2282D",
-  display:"flex",
-  flexDirection:"row",
-  justifyContent:"space-between"
+  // display:"flex",
+  // flexDirection:"row",
+  // justifyContent:"space-between"
 //   height:"60"
 }));
 
@@ -154,20 +155,26 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Box
-                component = "img"
-                alt = "logo of molato application"
-                src ={LogoHome}
-                sx={{
-                    height: 50,
-                    width: 100,
-                    m:2,
-                    // display: {xs:"none", sm:"block"}
-                }}
-                />
-    {/*       <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
-          </Typography> */}
+          <Link href="/dashboard">
+            <Box
+                  component = "img"
+                  alt = "logo of molato application"
+                  src ={LogoHome}
+                  sx={{
+                      height: 50,
+                      width: 100,
+                      m:2,
+                      // display: {xs:"none", sm:"block"}
+                  }}
+                  />
+          </Link>
+             <Stack>
+
+              {/* <Typography variant="h6" noWrap component="div">
+                Mini variant drawer
+              </Typography> */}
+
+             </Stack>
         </Toolbar>
       </AppBar>
       <Drawer  variant="permanent"  sx={{backgroundColor:"#D2282D"}} open={open}>

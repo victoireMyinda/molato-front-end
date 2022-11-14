@@ -7,6 +7,7 @@ import LoginIcon from '@mui/icons-material/Login';
 // import { FormControl,InputLabel,Input, FormHelperText} from '@mui/material';
 
 
+
 export default function Auth() {
     const styles={
         paperContainer:{
@@ -26,6 +27,7 @@ export default function Auth() {
         }
     }
  
+    
 
   return (
     <Paper style={styles.paperContainer} sx={{ height :"100vh"}}>
@@ -80,104 +82,100 @@ export default function Auth() {
                 <LoginIcon sx={{ color:"#D2282D",display: {xs:"block", sm:"none"}}}/>
               </Link>
         </AppBar>
-       <Stack 
-        sx={{
-            backgroundColor:"#fff",
-            width:"30%",
-            height:"75%",
-            display:"flex",
-            flexDirection:"column",
-            alignItems:"center",
-            textAlign:"center",
-            ml:"35%",
-            borderRadius:"20px",
-            '@media (max-width:900px)':{
-                width:"85%",
-                height:"50%",
-                ml:"7%",
-                mt:"35%",
+      <Stack 
+       direction="column"
+       justifyContent="center"
+       alignItems="center"
+       sx={{
+        height:"85%",
+        }}
+       >
 
-        }}}
-        direction="column"
-        spacing={2}
-        >
-            <Typography 
-            variant="h6" 
+        <Stack 
             sx={{
-                mt:"40px",
-                color:"#D2282D",
-                fontSize:"24px",
-                fontWeight:"600",
-                lineHeight:"25px",
-                mb:"30px",
-                '@media (max-width:600px)':{
-                    fontSize:"20px",
+                backgroundColor:"#fff",
+                height:"70%",
+                borderRadius:"20px",
+                
+                }}
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            spacing={{ xs: 1, md: 2,lg:2, sm:2}}
+            maxWidth={{
+                xs:"100%",
+                sm:"60%",
+                md:"50%",
+                lg:"30%"
+            }}
+            >
+                <Typography 
+                variant="h6" 
+                align="center"
+                sx={{
+                    width:"70%",
+                    color:"#D2282D",
+                    fontWeight:"600",
+                    lineHeight:"25px",
                     mb:"20px",
-                    width:"70%"
-                }}}>Apprendre à mieux gérer commence aujourd’hui</Typography>
-             <form style={styles.positionForm} >
-                <TextField
-                    required
-                    id="name"
-                    placeholder='Maria Lozo'
-                    sx={{backgroundColor:"#E4E4EC",
-                    mb:"20px",
-                    width: { sm: 200, md: 300 },
-                    "& .MuiInputBase-root": {
-                        height: 40
-                    } }}
-                    >
-                </TextField>
-                <TextField
-                    required
-                    id="boutique"
-                    placeholder="Maria couture"
-                    sx={{backgroundColor:"#E4E4EC",
-                    mb:"20px",
-                    width: { sm: 200, md: 300 },
-                    "& .MuiInputBase-root": {
-                        height: 40
+                }}
+                    >Apprendre à mieux gérer commence aujourd’hui</Typography>
+                <form style={styles.positionForm} >
+                    <TextField
+                        required
+                        id="name"
+                        placeholder='Maria Lozo'
+                        sx={{backgroundColor:"#E4E4EC",
+                        mb:"20px",
+                        width:{ sm: 250, md: 300, xs:200, lg:300 },
+                        "& .MuiInputBase-root": {
+                            height: 40
+                        } }}
+                        >
+                    </TextField>
+                    <TextField
+                        required
+                        id="boutique"
+                        placeholder="Maria couture"
+                        sx={{backgroundColor:"#E4E4EC",
+                        mb:"20px",
+                        width: { sm: 250, md: 300, xs:200, lg:300 },
+                        "& .MuiInputBase-root": {
+                            height: 40
+                        }}}
+                        >
+                    </TextField>
+                    <TextField
+                        required
+                        id="password"
+                        type="password"
+                        placeholder='Mot de passe'
+                        sx={{backgroundColor:"#E4E4EC",
+                        mb:"20px",
+                        width:{ sm: 250, md: 300, xs:200, lg:300 },
+                        "& .MuiInputBase-root": {
+                            height: 40
+                        }}}
+                        >
+                    </TextField>
+                    <Button 
+                    alignItems="center"
+                    variant="contained" 
+                    type="submit"
+                    sx={{
+                    backgroundColor: "#D2282D",
+                    color : "#fff",
+                    borderRadius:"10px",
+                    '&:hover':{
+                    backgroundColor:"#fff",
+                    color:"#D2282D"
                     }}}
                     >
-                </TextField>
-                <TextField
-                    required
-                    id="password"
-                    type="password"
-                    placeholder='Mot de passe'
-                    sx={{backgroundColor:"#E4E4EC",
-                    mb:"20px",
-                    width: { sm: 20, md: 300 },
-                    "& .MuiInputBase-root": {
-                        height: 40
-                    }}}
-                    >
-                </TextField>
-                <Stack 
-                sx={{display:"flex",
-                justifyContent:"center",
-                alignItems:"center",
-                mt:"20px"}}>
-                <Button 
-                variant="contained" 
-                type="submit"
-                 sx={{width:"180px",
-                marginLeft:"20px",
-                backgroundColor: "#D2282D",
-                color : "#fff",
-                borderRadius:"10px",
-                '&:hover':{
-                  backgroundColor:"#fff",
-                  color:"#D2282D"
-                },
-                '@media (max-width:600px)':{
-                  width:"200px"
-                }}}>
-                     S’enregistrer
-                </Button>
-                </Stack>
-            </form>
-       </Stack>
+                        S’enregistrer
+                    </Button>
+                </form>
+        </Stack>
+  </Stack>
     </Paper>
   )
 }
